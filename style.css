@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Madimi+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.feature, .service, .testimonial{
+    overflow: hidden;
+}
+
+.banner{
+    background: linear-gradient(rgba(0,0,0,.5), #009688),url(Barber_Shop_img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+.banner-text{
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+
+.banner-text h1{
+    font-size: 130px;
+    font-family:"Kaushan Script", cursive;
+}
+
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn{
+    margin: 70px auto 0;
+}
+
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color .5s ease;
+}
+
+.banner-btn a span{
+    background-color: #fff;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.banner-btn a:hover span{
+    width: 100%;
+    transition: all .6s ease;
+}
+
+.banner-btn a:hover{
+    color: #000;
+}
+
+.side-nav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    transition: all .3s ease;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+}
+
+.side-nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+
+.side-nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menuBtn{
+    width:50px;
+    height:50px;
+    background-color: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.menuBtn img{
+    width: 20px;
+    margin-top: 15px;
+}
+
+/* feartres */
+
+.feature{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+
+}
+
+.title-text p{
+    font-size: 20px;
+    color: #009688;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.title-text p:after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587, #fff);
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    left: 0;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1{
+    font-size: 50px;
+}
+
+.feature-box{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.feature-box .features{
+    flex-basis: 50%;
+}
+
+.feature-box .features-img{
+    margin: auto;
+    flex-basis: 50%;
+}
+
+.feature-box .features-img img{
+    width: 70%;
+    border-radius: 5px;
+}
+
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #009688;
+}
+
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.feature-icon .first{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    border: 1px solid #009688;
+    color: #009688;
+}
+
+.feature-text p{
+    text-align: initial;
+    padding: 0 20px;
+}
+
+/* services */
+
+.service{
+    width: 100%;
+    background: #efefef;
+    padding: 70px 0;
+}
+
+.service-box{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+
+}
+
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    color: #fff;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all .8s ease;
+}
+
+.single-service img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: linear-gradient(rgba(0,0,0,.5), #009688);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.single-service:hover .overlay{
+    opacity: 1;
+}
+
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.service-desc hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 40%;
+}
+
+.single-service:hover  .service-desc{
+    opacity: 1;
+    bottom: 40%;
+}
+
+/* testimonial */
+
+.testimonial{
+    width: 100%;
+    padding: 70px 0;
+
+}
+
+.testimonial-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    transition: all .5s ease;
+}
+
+.testimonial-col p{
+    text-align: justify;
+    /* padding: 10px 30px; */
+    font-size: 14px;
+}
+
+
+
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.testimonial-col:hover{
+    transform: translateY(-10px);
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+    position: relative;
+}
+
+.footer-row{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-right{
+    text-align: right;
+}
+
+.footer-left .footer-icon, .footer-right .footer-icon{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.footer-img{
+    max-width: 370px;
+    opacity: .1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+
+.social-link {
+    text-align: center;
+}
+
+.social-link i{
+    font-size: 25px;
+    color: #009688;
+    margin: 0 10px;
+    border: 1px solid #009688;
+    padding: 7px 10px ;
+    border-radius: 3px;
+    transition: all .5s ease;
+}
+
+.social-link i:hover {
+    color: #fff;
+    transform: translateY(-7px);
+    background: #009688;
+}
+
+/* media query */
+@media  screen and (max-width:480px) {
+    .banner{
+        height: 500px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+    }
+
+    .banner-btn a{
+        display: block;
+        margin: 10px auto;
+    }
+
+    .banner-btn {
+        margin: 40px auto 0;
+    }
+
+    .title-text {
+        padding-bottom: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 40px;
+    }
+
+    .feature-box {
+        display: block;
+    }
+
+    .feature-text p {
+        /* font-size: 20px; */
+        text-align: justify;
+    }
+
+    .feature-box .features-img img{
+        width: 100%;
+    }
+
+    .service-box {
+        display: block;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 30%;
+    }
+
+    .testimonial-row {
+        display: block;
+    }
+
+    .footer-row{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width:481px) and (max-width: 780px){
+    .banner{
+        height: 500px;
+    }
+
+    .banner-text h1 {
+        font-size: 70px;
+    }
+
+    .banner-btn {
+        margin: 40px auto 0;
+    }
+
+    .feature-box {
+        display: block;
+    }
+
+    .feature-text p {
+        /* font-size: 25px; */
+        text-align: justify;
+    }
+
+    .title-text h1 {
+        font-size: 40px;
+    }
+
+    .title-text {
+        padding-bottom: 30px;
+    }
+    .feature-box .features-img img{
+        width: 100%;
+    }
+
+    .service-box {
+        display: flex;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 40%;
+    }
+
+    .testimonial-row {
+        display: block;
+    }
+
+    .footer-row{
+        display: block;
+    }
+}
